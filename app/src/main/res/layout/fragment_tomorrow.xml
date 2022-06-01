@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TodayFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <include
+            android:id="@+id/tomorrow_weather_item"
+            layout="@layout/tomorrow_weather_item" />
+
+        <include
+            android:id="@+id/tomorrow_weather_chart"
+            layout="@layout/tomorrow_weather_chart" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <include
+            android:id="@+id/tomorrow_weather_detail"
+            layout="@layout/tomorrow_weather_detail" />
+
+        <include
+            android:id="@+id/tomorrow_weather_rain"
+            layout="@layout/tomorrow_weather_rain"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+        <include
+            android:id="@+id/tomorrow_weather_wind"
+            layout="@layout/tomorrow_weather_wind"
+            />
+    </LinearLayout>
+
+</ScrollView>

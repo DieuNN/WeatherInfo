@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.dieunn.weatherapp.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/menu_to_main_fragment"
+            app:destination="@id/mainFragment"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.dieunn.weatherapp.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            app:launchSingleTop="true"
+            android:id="@+id/search_fragment_to_main_fragment"
+            app:popUpTo="@id/mainFragment"
+            app:destination="@id/mainFragment"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.dieunn.weatherapp.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/main_fragment_to_menu_fragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/main_to_search_fragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+</navigation>
